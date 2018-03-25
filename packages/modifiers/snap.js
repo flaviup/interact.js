@@ -13,7 +13,7 @@ function init (scope) {
   defaults.perAction.snap = snap.defaults;
 }
 
-function setOffset ({ interaction, interactable, element, rect, startOffset, options }) {
+function start ({ interaction, interactable, element, rect, startOffset, options }) {
   const offsets = [];
   const optionsOrigin = utils.rect.rectToXY(utils.rect.resolveRectLike(options.origin));
   const origin = optionsOrigin || utils.getOriginXY(interactable, element, interaction.prepared.name);
@@ -170,7 +170,7 @@ function modifyCoords ({ page, client, status, phase, options }) {
 
 const snap = {
   init,
-  setOffset,
+  start,
   set,
   modifyCoords,
   defaults: {

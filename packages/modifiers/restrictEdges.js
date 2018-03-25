@@ -29,7 +29,7 @@ function init (scope) {
   defaults.perAction.restrictEdges = restrictEdges.defaults;
 }
 
-function setOffset ({ interaction, options }) {
+function start ({ interaction, options }) {
   const startOffset = interaction.modifiers.startOffset;
   let offset;
 
@@ -116,7 +116,7 @@ const restrictEdges = {
   noInner,
   noOuter,
   getRestrictionRect,
-  setOffset,
+  start,
   set,
   modifyCoords,
   defaults: {
